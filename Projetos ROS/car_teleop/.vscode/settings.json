@@ -1,0 +1,14 @@
+{
+    "ros.distro": "melodic",
+    "python.autoComplete.extraPaths": [
+        "C:/Users/Gus/Documents/ros_workspace/devel\\lib/site-packages",
+        "C:/opt/ros/melodic/x64\\lib/site-packages"
+    ],
+    "files.associations": {
+        "xmemory": "cpp"
+    },
+    "python.analysis.extraPaths": [
+        "C:/Users/Gus/Documents/ros_workspace/devel\\lib/site-packages",
+        "C:/opt/ros/melodic/x64\\lib/site-packages"
+    ]
+}
