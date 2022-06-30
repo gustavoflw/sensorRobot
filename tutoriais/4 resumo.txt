@@ -1,0 +1,22 @@
+Para erguer todos os nodos e controlar o carrinho
+    - Executar o roscore
+        >> roscore
+    - Em nova aba, executar o nodo do rosserial
+	>> roslaunch car_teleop prepare.launch
+	OU:
+        >> rosrun rosserial_python serial_node.py tcp
+    - Em nova aba, executar o nodo do car_teleop/main.cpp
+        >> rosrun car_teleop main
+
+Para compilar o workspace
+    - Navegar até a pasta ros_workspace
+    >> catkin_make
+
+Para ver tópicos
+    >> rostopic list
+
+Para ver output de um tópico
+    >> rostopic echo [tópico]
+
+Para executar um nodo
+    >> rosrun [nome do pacote] [nodo]

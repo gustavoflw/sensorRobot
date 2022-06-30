@@ -1,0 +1,25 @@
+Iniciar o ROS master (precisa estar rodando antes de iniciar outros nodos)
+	- No terminal Ubuntu:
+		>> roscore
+	
+Compilar workspace
+	- Colocar a pasta "car_teleop" do Drive na sua ros_workspace/src
+		- "car_teleop" é o projeto referente ao código do PC
+		- O código que rodará no PC fica na pasta car_teleop/src/main.cpp
+		- Usar nova aba do terminal depois disso (precaução)
+		- Na pasta ros_workspace:
+			>> catkin_make
+				- Isso vai compilar o workspace inteiro, incluindo o car_teleop/src/main.cpp
+			
+Executar o nodo do PC
+	- No terminal ROS:
+		>> rosrun car_teleop main
+			- Isso vai executar o programa do car_teleop/src/main.cpp
+			- O primeiro nome é o do projeto e o segundo é o do executável
+			
+Ver tópicos ativos
+	>> rostopic list
+	
+Printar output de um tópico
+	>> rostopic echo [tópico]
+	Exemplo: rostopic echo /pc/is_alive (tópico publicado pelo car_teleop/src/main.cpp)

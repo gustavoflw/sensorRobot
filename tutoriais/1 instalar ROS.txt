@@ -1,0 +1,38 @@
+Documentação
+- http://wiki.ros.org/
+
+Instalação do ROS no PC
+	- Abrir tutorial: http://wiki.ros.org/Installation/Windows
+	- Selecionar versão melodic (estável mais recente pra Windows)
+	- Criar pasta "ros_workspace" em Documentos
+	- Seguir até o passo 5.1 do tutorial
+	- Instalar o Windows Terminal pela Windows Store
+	- Abrir o Windows Terminal como administrador, ir em "configurações" e "abrir o arquivo JSON"
+	- Seguir o passo 6.1 pra adicionar o item à lista (copiar o meu item como referência) 
+		- verificar caminho do VsDevCmd.bat, pois a versão do Visual Studio pode ser 2019 ou 2022
+		- verificar caminho do ros_workspace
+		- de guid pode usar o valor inventado: "{b453ad62-4e3d-5e59-b989-0a998ec441b8}"
+		- startingDirectory é pra ser a pasta do seu workspace, no meu caso é a ros_workspace que está em Documentos ("C:\\Users\\gusta\\Documents\\ros_workspace")
+		- meu item como referência:
+			{
+				  "commandline": "C:\\Windows\\System32\\cmd.exe /k \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -arch=amd64 -host_arch=amd64 && set ChocolateyInstall=c:\\opt\\chocolatey && c:\\opt\\ros\\melodic\\x64\\setup.bat && C:\\Users\\gusta\\Documents\\ros_workspace\\devel\\setup.bat",
+				  "guid": "{b453ad62-4e3d-5e59-b989-0a998ec441b8}",
+				  "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+				  "name": "ROS",
+				  "startingDirectory": "C:\\Users\\gusta\\Documents\\ros_workspace"
+			}
+	
+Configurar workspace
+	- Abrir aba do ROS no Windows Terminal (abre direto na pasta do workspace)
+	- Deve ter um erro de arquivo não encontrado ainda
+	- Criar pasta src:
+		>> mkdir src
+	- Configurar o workspace (vai popular a pasta do workspace com alguns arquivos):
+		>> catkin_make
+	- Abrir nova aba e o erro deve ter desaparecido
+	- Conferir se o workspace aparece no %ROS_PACKAGE_PATH%:
+		>> echo %ROS_PACKAGE_PATH%
+
+INSTALAÇÃO DA BIBLIOTECA NA ARDUINO IDE
+- Clicar em:
+	- Sketch -> Include Library -> Manage Libraries -> rosserial

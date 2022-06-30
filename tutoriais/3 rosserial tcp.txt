@@ -1,0 +1,8 @@
+------------ Jeito facil ------------
+	>> roslaunch car_teleop prepare.launch
+
+------------ Maneira alternativa ------------
+ROSSERIAL
+	>> rosrun rosserial_python serial_node.py tcp
+		- Para que o ROS master no PC consiga se comunicar com o ESP remoto, é necessário
+		ligar o rosserial por TCP
